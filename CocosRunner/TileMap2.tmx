@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="40" height="40" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="tmw_desert_spacing.png" width="265" height="199"/>
+ </tileset>
+ <tileset firstgid="49" name="meta_tiles" tilewidth="32" tileheight="32">
+  <image source="meta_tiles.png" width="67" height="34"/>
+  <tile id="0">
+   <properties>
+    <property name="Collidable" value="True"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Collectable" value="True"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztlttuwjAMQA17GDAJxpCADY1168Ydxv9/3RwJC2ScJmmWYKQ+nIeqaXPiJLbnADBPSB8ZIM+J56nDQbmf9vgZxsgEmSpwkWghbeQhw1yvyFsAM6SL9JCnDH6fyDey8eAHKRP6rSx+ZcBaUvpVzanJb6HQ78i8tPjxM8efb+En3YMVi98CbudnWLJn8pHit4PrHGfe8dy4T7C/3JOzhus8t3W8i/V7PNHxGHuo8f9YvwGc+wuqlTaohrrGXfIe6TeBc39Ba7VBc7jGVX0bc/aGyEsFo9NY17iqb0P4sHjG3jOJOr1PkdCHY3LTlwPqjaj3yeFFd17KP7ZcFVIHQij+Mda54mf4Bb/zR7Uohx8/1z7nr4R8ftKeufyotlPtTuVSsL319ZNiqSl+3O+o3C9n/Hzyn5QLG8IoFDjcCzxWUj+lkWaPGxr8+AMYZba+
+  </data>
+ </layer>
+ <layer name="Foreground" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt1NEJACAIRVE3af8t+2iDhFI5Z4KLwougm/U7gCf8+XAH4Jb9ACaovmX6cqr3AQB0twH0KgD5
+  </data>
+ </layer>
+ <layer name="Meta" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmEsOwCAIBbmS3v9w3Zr4RRCelkncURixalOi/5K8BTbJ3gIXkYphWYsziNp+2uus7adNb51afUDyG8WGX12TExt+dU1OrIdf7/xAOV+Q/Xaf0fDj3AUe98csh6QWcv84+77E8jvRak4Sv5UYazfuO5EP+mnkPOk3AqF/M7+VGHQ/i/3Rys2th9g/SbyUG/xQ746XiL7tE//dguAtPrGhLTY=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="40" height="40">
+  <object name="SpawnPoint" x="284" y="652" width="35" height="33"/>
+ </objectgroup>
+</map>
