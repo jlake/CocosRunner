@@ -126,7 +126,7 @@ NSString * const SND_WALKING = @"move.caf";
     if(isMoving) {
         movingSoundId = [audioEngine playEffect:SND_WALKING];
     }
-    [timer invalidate];
+    
 }
 
 - (void)bearMoveEnded
@@ -140,6 +140,12 @@ NSString * const SND_WALKING = @"move.caf";
     bear = nil;
     walkAction = nil;
     moveAction = nil;
+    audioEngine = nil;
+    
+    if(soundTimer != nil) {
+        [soundTimer invalidate];
+        soundTimer = nil;
+    }
     
 	[super dealloc];
 }

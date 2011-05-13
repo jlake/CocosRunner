@@ -45,7 +45,7 @@ NSString * const SND_PICKUP = @"pickup.caf";
         [audioEngine preloadEffect:SND_MOVE];
         [audioEngine preloadEffect:SND_HIT];
         [audioEngine preloadEffect:SND_PICKUP];
-        [audioEngine playBackgroundMusic:SND_BACKGROUND];
+        [audioEngine playBackgroundMusic:SND_BACKGROUND loop:YES];
         
 		tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"TileMap2.tmx"];
         background = [tileMap layerNamed:@"Background"];
@@ -160,6 +160,9 @@ NSString * const SND_PICKUP = @"pickup.caf";
     background = nil;
     player = nil;
     scoreLayer = nil;
+
+    [audioEngine stopBackgroundMusic];
+    audioEngine = nil;
     
 	[super dealloc];
 }
