@@ -8,10 +8,10 @@
 
 #import "MapLayer.h"
 
+NSString * const SND_BACKGROUND = @"backMusic.mp3";
 NSString * const SND_MOVE = @"move.caf";
 NSString * const SND_HIT = @"hit.caf";
 NSString * const SND_PICKUP = @"pickup.caf";
-NSString * const SND_BACKGROUND = @"TileMap.caf";
 
 @implementation MapLayer
 

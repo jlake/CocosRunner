@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CB19A45137CC59D001F019C /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB19A44137CC59D001F019C /* MenuLayer.m */; };
+		8CB19A51137CC7ED001F019C /* AnimBearLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB19A50137CC7ED001F019C /* AnimBearLayer.m */; };
+		8CB19A54137CC8C8001F019C /* AnimBear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB19A52137CC8C8001F019C /* AnimBear.plist */; };
+		8CB19A55137CC8C8001F019C /* AnimBear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB19A53137CC8C8001F019C /* AnimBear.png */; };
 		8CD0C767137B80CB002CE8FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD0C766137B80CB002CE8FE /* QuartzCore.framework */; };
 		8CD0C769137B80CB002CE8FE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD0C768137B80CB002CE8FE /* OpenGLES.framework */; };
 		8CD0C76B137B80CB002CE8FE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD0C76A137B80CB002CE8FE /* OpenAL.framework */; };
@@ -126,15 +130,21 @@
 		8CD0C8E0137B8172002CE8FE /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8DA137B8172002CE8FE /* meta_tiles.png */; };
 		8CD0C8E1137B8172002CE8FE /* move.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8DB137B8172002CE8FE /* move.caf */; };
 		8CD0C8E2137B8172002CE8FE /* pickup.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8DC137B8172002CE8FE /* pickup.caf */; };
-		8CD0C8E3137B8172002CE8FE /* TileMap.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8DD137B8172002CE8FE /* TileMap.caf */; };
 		8CD0C8E4137B8172002CE8FE /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8DE137B8172002CE8FE /* tmw_desert_spacing.png */; };
 		8CD0C8E7137B81C9002CE8FE /* MapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0C8E6137B81C9002CE8FE /* MapLayer.m */; };
 		8CD0C8E9137B8CAA002CE8FE /* TileMap2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8E8137B8CAA002CE8FE /* TileMap2.tmx */; };
 		8CD0C8EB137B9222002CE8FE /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0C8EA137B9222002CE8FE /* Player.png */; };
 		8CD0C8F6137BA831002CE8FE /* ScoreLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0C8F5137BA831002CE8FE /* ScoreLayer.m */; };
+		8CF7A7B5137D06AE001547AD /* backMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CF7A7B4137D06AE001547AD /* backMusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CB19A43137CC59D001F019C /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
+		8CB19A44137CC59D001F019C /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
+		8CB19A4F137CC7ED001F019C /* AnimBearLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimBearLayer.h; sourceTree = "<group>"; };
+		8CB19A50137CC7ED001F019C /* AnimBearLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimBearLayer.m; sourceTree = "<group>"; };
+		8CB19A52137CC8C8001F019C /* AnimBear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnimBear.plist; sourceTree = "<group>"; };
+		8CB19A53137CC8C8001F019C /* AnimBear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AnimBear.png; sourceTree = "<group>"; };
 		8CD0C762137B80CB002CE8FE /* CocosRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocosRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD0C766137B80CB002CE8FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8CD0C768137B80CB002CE8FE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -373,7 +383,6 @@
 		8CD0C8DA137B8172002CE8FE /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
 		8CD0C8DB137B8172002CE8FE /* move.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = move.caf; sourceTree = "<group>"; };
 		8CD0C8DC137B8172002CE8FE /* pickup.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pickup.caf; sourceTree = "<group>"; };
-		8CD0C8DD137B8172002CE8FE /* TileMap.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TileMap.caf; sourceTree = "<group>"; };
 		8CD0C8DE137B8172002CE8FE /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
 		8CD0C8E5137B81C9002CE8FE /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLayer.h; sourceTree = "<group>"; };
 		8CD0C8E6137B81C9002CE8FE /* MapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLayer.m; sourceTree = "<group>"; };
@@ -381,6 +390,7 @@
 		8CD0C8EA137B9222002CE8FE /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		8CD0C8F4137BA830002CE8FE /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreLayer.h; sourceTree = "<group>"; };
 		8CD0C8F5137BA831002CE8FE /* ScoreLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreLayer.m; sourceTree = "<group>"; };
+		8CF7A7B4137D06AE001547AD /* backMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backMusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +447,8 @@
 		8CD0C776137B80CB002CE8FE /* CocosRunner */ = {
 			isa = PBXGroup;
 			children = (
+				8CB19A43137CC59D001F019C /* MenuLayer.h */,
+				8CB19A44137CC59D001F019C /* MenuLayer.m */,
 				8CD0C8C8137B80CD002CE8FE /* AppDelegate.h */,
 				8CD0C8C9137B80CD002CE8FE /* AppDelegate.m */,
 				8CD0C8CB137B80CD002CE8FE /* RootViewController.h */,
@@ -449,6 +461,8 @@
 				8CD0C8E6137B81C9002CE8FE /* MapLayer.m */,
 				8CD0C8F4137BA830002CE8FE /* ScoreLayer.h */,
 				8CD0C8F5137BA831002CE8FE /* ScoreLayer.m */,
+				8CB19A4F137CC7ED001F019C /* AnimBearLayer.h */,
+				8CB19A50137CC7ED001F019C /* AnimBearLayer.m */,
 			);
 			path = CocosRunner;
 			sourceTree = "<group>";
@@ -456,13 +470,15 @@
 		8CD0C777137B80CB002CE8FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CF7A7B4137D06AE001547AD /* backMusic.mp3 */,
+				8CB19A52137CC8C8001F019C /* AnimBear.plist */,
+				8CB19A53137CC8C8001F019C /* AnimBear.png */,
 				8CD0C8EA137B9222002CE8FE /* Player.png */,
 				8CD0C8E8137B8CAA002CE8FE /* TileMap2.tmx */,
 				8CD0C8D9137B8172002CE8FE /* hit.caf */,
 				8CD0C8DA137B8172002CE8FE /* meta_tiles.png */,
 				8CD0C8DB137B8172002CE8FE /* move.caf */,
 				8CD0C8DC137B8172002CE8FE /* pickup.caf */,
-				8CD0C8DD137B8172002CE8FE /* TileMap.caf */,
 				8CD0C8DE137B8172002CE8FE /* tmw_desert_spacing.png */,
 				8CD0C8D7137B8158002CE8FE /* TileMap.tmx */,
 				8CD0C778137B80CB002CE8FE /* Default.png */,
@@ -851,10 +867,12 @@
 				8CD0C8E0137B8172002CE8FE /* meta_tiles.png in Resources */,
 				8CD0C8E1137B8172002CE8FE /* move.caf in Resources */,
 				8CD0C8E2137B8172002CE8FE /* pickup.caf in Resources */,
-				8CD0C8E3137B8172002CE8FE /* TileMap.caf in Resources */,
 				8CD0C8E4137B8172002CE8FE /* tmw_desert_spacing.png in Resources */,
 				8CD0C8E9137B8CAA002CE8FE /* TileMap2.tmx in Resources */,
 				8CD0C8EB137B9222002CE8FE /* Player.png in Resources */,
+				8CB19A54137CC8C8001F019C /* AnimBear.plist in Resources */,
+				8CB19A55137CC8C8001F019C /* AnimBear.png in Resources */,
+				8CF7A7B5137D06AE001547AD /* backMusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +982,8 @@
 				8CD0C8CD137B80CD002CE8FE /* RootViewController.m in Sources */,
 				8CD0C8E7137B81C9002CE8FE /* MapLayer.m in Sources */,
 				8CD0C8F6137BA831002CE8FE /* ScoreLayer.m in Sources */,
+				8CB19A45137CC59D001F019C /* MenuLayer.m in Sources */,
+				8CB19A51137CC7ED001F019C /* AnimBearLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,6 +1077,7 @@
 				8CD0C8D6137B80CD002CE8FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,10 +10,10 @@
 #import "ScoreLayer.h"
 #import "SimpleAudioEngine.h"
 
+extern NSString * const SND_BACKGROUND;
 extern NSString * const SND_MOVE;
 extern NSString * const SND_HIT;
 extern NSString * const SND_PICKUP;
-extern NSString * const SND_BACKGROUND;
 
 @interface MapLayer : CCLayer {
 @private

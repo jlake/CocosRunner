@@ -3,8 +3,10 @@ A simple run & collect game demo based on Cocos2d framework for iOS.
 With:
 1. titled map
 2. score layer
+3. walking animation
 
 XCode version : 4.0
 
 Tutorial:
 http://www.raywenderlich.com/1163/how-to-make-a-tile-based-game-with-cocos2d
+http://www.raywenderlich.com/1271/how-to-use-animations-and-sprite-sheets-in-cocos2d

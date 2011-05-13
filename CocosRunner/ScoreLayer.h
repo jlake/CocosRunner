@@ -15,8 +15,6 @@
     CGSize winSize;
 }
 
-//+(CCScene *) scene;
-
 - (void)updateScore:(int)score;
 - (void)updateLabelPosition;
 

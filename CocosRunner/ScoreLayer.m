@@ -7,19 +7,25 @@
 //
 
 #import "ScoreLayer.h"
-
+#import "MenuLayer.h"
 
 @implementation ScoreLayer
 
-//+(CCScene *) scene
-//{
-//	CCScene *scene = [CCScene node];
-//	ScoreLayer *layer = [ScoreLayer node];
-//	[scene addChild: layer];
-//	
-//	return scene;
-//}
-
+-(void) setupGameMenu
+{
+    CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"<<Menu" fontName:@"Marker Felt" fontSize:20];
+    label1.color = ccc3(0, 0, 255);
+	CCMenuItemImage * menuItem1 = [CCMenuItemLabel itemWithLabel:label1
+                                                          target:self
+                                                        selector:@selector(loadMenuScene:)]; 
+	CCMenu *menu = [CCMenu menuWithItems:menuItem1, nil];
+    int margin = 5;
+    menu.position = ccp(label1.contentSize.width/2 + margin, winSize.height - label1.contentSize.height/2 - margin);
+	[menu alignItemsHorizontally];
+    
+	[self addChild:menu];
+}
+                                   
 -(id) init
 {
 	if((self=[super init])) {
@@ -29,6 +35,8 @@
         
         [self addChild:label];
         [self updateLabelPosition];
+        
+        [self setupGameMenu];
 	}
 	return self;
 }
@@ -45,6 +53,10 @@
     label.position = ccp(winSize.width - (label.contentSize.width / 2) - margin, (label.contentSize.height / 2) + margin);
 }
 
+- (void) loadMenuScene: (CCMenuItem  *) menuItem 
+{
+    [[CCDirector sharedDirector] replaceScene: [MenuLayer scene]];
+}
 
 - (void) dealloc
 {
