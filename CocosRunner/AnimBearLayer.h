@@ -18,16 +18,15 @@ extern NSString * const SND_WALKING;
     CCSprite *bear;
     CCAction *walkAction;
     CCAction *moveAction;
-    
-    BOOL isMoving;
-    ALuint movingSoundId;
     NSTimer *soundTimer;
     
+    BOOL isMoving;
 }
 
 @property (nonatomic, retain) CCSprite *bear;
 @property (nonatomic, retain) CCAction *walkAction;
 @property (nonatomic, retain) CCAction *moveAction;
+@property (nonatomic, assign) NSTimer *soundTimer;
 
 +(CCScene *) scene;
 

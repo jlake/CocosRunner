@@ -16,6 +16,7 @@ NSString * const SND_WALKING = @"move.caf";
 @synthesize bear;
 @synthesize walkAction;
 @synthesize moveAction;
+@synthesize soundTimer;
 
 +(CCScene *) scene
 {
@@ -39,11 +40,6 @@ NSString * const SND_WALKING = @"move.caf";
 	[menu alignItemsHorizontally];
     
 	[self addChild:menu];
-}
-
-- (void) loadMenuScene: (CCMenuItem  *) menuItem 
-{
-    [[CCDirector sharedDirector] replaceScene: [MenuLayer scene]];
 }
 
 -(id) init
@@ -99,53 +95,69 @@ NSString * const SND_WALKING = @"move.caf";
     CGPoint moveDiff = ccpSub(touchLocation, bear.position);
     float moveDuration = ccpLength(moveDiff) / moveSpeed;
     bear.flipX = (moveDiff.x >= 0);
-    NSLog(@"moveDuration=%f bear.flipX=%d", moveDuration, bear.flipX);
+    //NSLog(@"moveDuration=%f bear.flipX=%d", moveDuration, bear.flipX);
     
-    //if(moveAction != NULL) {
+    if(moveAction != nil) {
         [bear stopAction:moveAction];
-    //}
+    }
     if (!isMoving) {
         [bear runAction:walkAction];
     }
     
     self.moveAction = [CCSequence actions:
-                  [CCMoveTo actionWithDuration:moveDuration position:touchLocation],
-                  [CCCallFunc actionWithTarget:self selector:@selector(bearMoveEnded)],
-                  nil];
+                       [CCMoveTo actionWithDuration:moveDuration position:touchLocation],
+                       [CCCallFunc actionWithTarget:self selector:@selector(stopMoving)],
+                       nil];
     
     
     [bear runAction:moveAction];
     isMoving = TRUE;
     
     [audioEngine playEffect:SND_WALKING];
-    soundTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(playerMoveSound:) userInfo:nil repeats:YES];
+    if(soundTimer != nil) {
+        [soundTimer invalidate];
+    }
+    soundTimer = [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                  target:self
+                                                selector:@selector(playMovingSound:)
+                                                userInfo:nil
+                                                 repeats:YES];
 }
 
--(void)playerMoveSound:(NSTimer*)timer
+-(void)playMovingSound:(NSTimer*)timer
 {
     if(isMoving) {
-        movingSoundId = [audioEngine playEffect:SND_WALKING];
+        [audioEngine playEffect:SND_WALKING];
     }
+}
+
+- (void)stopMoving
+{
+    if(isMoving) {
+        //NSLog(@"stopMoving");
+        [bear stopAction:walkAction];
+        [soundTimer invalidate];
+        soundTimer = nil;
+        isMoving = FALSE;
+    }
+}
+
+- (void) loadMenuScene: (CCMenuItem  *) menuItem 
+{
+    if(isMoving) {
+        [self stopMoving];
+    }
+    [[CCDirector sharedDirector] replaceScene: [MenuLayer scene]];
+}
+
+- (void)dealloc
+{
     
-}
-
-- (void)bearMoveEnded
-{
-    [bear stopAction:walkAction];
-    isMoving = FALSE;
-}
-
-- (void) dealloc
-{
+    //NSLog(@"dealloc");
     bear = nil;
     walkAction = nil;
     moveAction = nil;
     audioEngine = nil;
-    
-    if(soundTimer != nil) {
-        [soundTimer invalidate];
-        soundTimer = nil;
-    }
     
 	[super dealloc];
 }
