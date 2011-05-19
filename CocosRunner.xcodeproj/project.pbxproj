@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C323AE91384A4EF000F2C77 /* FreeDrawLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C323AE81384A4EF000F2C77 /* FreeDrawLayer.m */; };
 		8CB19A45137CC59D001F019C /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB19A44137CC59D001F019C /* MenuLayer.m */; };
 		8CB19A51137CC7ED001F019C /* AnimBearLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB19A50137CC7ED001F019C /* AnimBearLayer.m */; };
 		8CB19A54137CC8C8001F019C /* AnimBear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CB19A52137CC8C8001F019C /* AnimBear.plist */; };
@@ -139,6 +140,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C323AE71384A4EF000F2C77 /* FreeDrawLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeDrawLayer.h; sourceTree = "<group>"; };
+		8C323AE81384A4EF000F2C77 /* FreeDrawLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeDrawLayer.m; sourceTree = "<group>"; };
 		8CB19A43137CC59D001F019C /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
 		8CB19A44137CC59D001F019C /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
 		8CB19A4F137CC7ED001F019C /* AnimBearLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimBearLayer.h; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				8CD0C8F5137BA831002CE8FE /* ScoreLayer.m */,
 				8CB19A4F137CC7ED001F019C /* AnimBearLayer.h */,
 				8CB19A50137CC7ED001F019C /* AnimBearLayer.m */,
+				8C323AE71384A4EF000F2C77 /* FreeDrawLayer.h */,
+				8C323AE81384A4EF000F2C77 /* FreeDrawLayer.m */,
 			);
 			path = CocosRunner;
 			sourceTree = "<group>";
@@ -984,6 +989,7 @@
 				8CD0C8F6137BA831002CE8FE /* ScoreLayer.m in Sources */,
 				8CB19A45137CC59D001F019C /* MenuLayer.m in Sources */,
 				8CB19A51137CC7ED001F019C /* AnimBearLayer.m in Sources */,
+				8C323AE91384A4EF000F2C77 /* FreeDrawLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

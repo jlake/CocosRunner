@@ -9,6 +9,7 @@
 #import "MenuLayer.h"
 #import "MapLayer.h"
 #import "AnimBearLayer.h"
+#import "FreeDrawLayer.h"
 
 @implementation MenuLayer
 
@@ -30,22 +31,25 @@
 
 -(void)setupMainMenu
 {
-    //   CCMenuItemImage * menuItem = [CCMenuItemImage itemFromNormalImage:@"MenuItem.png"
-    //                                                         selectedImage:@"MenuItem_on.png"
-    //                                                                target:self
-    //                                                              selector:@selector(showGuide:)]; 
+    NSString *menuFont = @"Marker Felt";
     
-    CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Walking On Map" fontName:@"Marker Felt" fontSize:32];
+    CCLabelTTF *label1 = [CCLabelTTF labelWithString:@"Walking On Map" fontName:menuFont fontSize:32];
 	CCMenuItemImage * menuItem1 = [CCMenuItemLabel itemWithLabel:label1
                                                           target:self
                                                         selector:@selector(loadMapScene:)]; 
     
-    CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Bear Animation" fontName:@"Marker Felt" fontSize:32];
+    CCLabelTTF *label2 = [CCLabelTTF labelWithString:@"Bear Animation" fontName:menuFont fontSize:32];
 	CCMenuItemImage * menuItem2 = [CCMenuItemLabel itemWithLabel:label2
                                                           target:self
                                                         selector:@selector(loadBearScene:)]; 
     
-	CCMenu * myMenu = [CCMenu menuWithItems:menuItem1, menuItem2, nil];
+    
+    CCLabelTTF *label3 = [CCLabelTTF labelWithString:@"Draw Line" fontName:menuFont fontSize:32];
+	CCMenuItemImage * menuItem3 = [CCMenuItemLabel itemWithLabel:label3
+                                                          target:self
+                                                        selector:@selector(loadLineScene:)]; 
+
+	CCMenu * myMenu = [CCMenu menuWithItems:menuItem1, menuItem2, menuItem3, nil];
     
 	[myMenu alignItemsVertically];
     
@@ -60,6 +64,11 @@
 - (void) loadBearScene: (CCMenuItem  *) menuItem 
 {
 	[[CCDirector sharedDirector] replaceScene: [AnimBearLayer scene]];
+}
+
+- (void) loadLineScene: (CCMenuItem  *) menuItem 
+{
+	[[CCDirector sharedDirector] replaceScene: [FreeDrawLayer scene]];
 }
 
 - (void) dealloc
